@@ -97,7 +97,9 @@ def evaluate(num_video_frames, rgb_npy, flow_npy, label, result_log_f):
     model_logits = rgb_logits + flow_logits
   model_predictions = tf.nn.softmax(model_logits)
 
-  with tf.Session() as sess:
+  config = tf.ConfigProto()
+  config.gpu_options.allow_growth=True
+  with tf.Session(config=config) as sess:
     feed_dict = {}
     if eval_type in ['rgb', 'rgb600', 'joint']:
       if imagenet_pretrained:

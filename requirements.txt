@@ -3,7 +3,7 @@ tensorflow==1.15
 dm-sonnet==1.35
 tensorflow-probability==0.7.0
 tensorflow-gpu==1.15
-pytube
-pypng
-opencv
-opencv-contrib-python
+pytube==9.5.3
+pypng==0.0.20
+opencv==4.1.2
+opencv-contrib-python==4.1.2
